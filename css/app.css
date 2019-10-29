@@ -59,17 +59,28 @@
     margin-top: 50px;
 }
 
+#carouselbrand 
+.carousel-item.active {
+    display: flex;
+}
+
+.carousel-item {
+    margin: 0 !important;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 50%;
+}
+
 .large-padding-top {
     margin-top: 10%;   
 }
 
-.carousel-item > img {
-    max-width: 100px;
-    display: inline ;   
+.carousel-inner {
+    display: flex;
+    justify-content: center;
 }
 
-.carousel-item {
-    width: 100%;
-    display: block;
-white-space: nowrap;
+.carousel-item.active > img {
+    max-width: 100px;
+    display: flex;
 }
