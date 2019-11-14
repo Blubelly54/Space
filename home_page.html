@@ -1,115 +1,106 @@
 <!DOCTYPE html>
 <head >
-
-    
 	<meta charset="utf-8">
 	<title >(Brackets Live Preview: closed) Example Home Page</title>
 	<meta name="author" content="Your Name">
 	<meta name="description" content="Example description">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="/css/app.css">
-    <link href="/Awesome/fontawesome-free-5.11.2-web/css/all.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="css/app.css"  type="text/css">
+	<link href="Awesome/fontawesome-free-5.11.2-web/css/all.css" rel="stylesheet" type="text/css">
+	<link type="text/css" rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
 </head>
 
 
 <body >
-    
-	<header class="sticky-top gradient">
-            <div class="row align-items-center" id="nav-main">
-                <div class="col-1"><img src="/img/logo-white.svg">
-                <div class="col-6 offset-5">
-                    <ul class="list-group list-group-horizontal align-items-center float-right">
-                      <li class="list-group-item list-nav-main">Home</li>
-                      <li class="list-group-item list-nav-main">Pages</li>
-                      <li class="list-group-item list-nav-main">Works</li>
-                      <li class="list-group-item list-nav-main">Shop</li>
-                      <li class="list-group-item list-nav-main">Docs</li>
-                      <li class="list-group-item list-nav-main"><button type="button" class="btn btn-success signin-button"><i class="fas fa-user-circle" id="user-icon-nav"></i> Signin</button> </li>
-                      <li class="list-group-item list-nav-main"><span><i class="fas fa-search"></i></span></li>
-                      <li class="list-group-item list-nav-main"><span><i class="fas fa-shopping-cart"></i></span></li>
-                      <li class="list-group-item list-nav-main"><span><i class="fas fa-bars"></i></span></li>
-                    </ul>
-                </div>
-            </div>
-        
-    </header>
-    <main >
-            <div class="container gradient">
-                <div class="row align-items-center large-padding-top">
-                    <div class="col-6" id="slogan-main">
-                            <p>Join the change</p> 
-                            <h1>Space service that moves work forward</h1>    
-                    </div>
-                    <div class="col-6">
-                        <div class="rounded" id="div-signin-form">
-                            <h2 >Get sarted for free
-                            </h2>
-                            <form id="homepage-signin-form">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Enter your user name">
-                                </div>
-                                <div class="form-group">
-                                    <input type="email" class="form-control" placeholder="Enter your email adress">
-                                </div>
-                                <div class="form-group">
-                                    <input type="password" class="form-control" placeholder="Enter your password">
-                                </div>
-                                <div class="form-group">
-                                    <button type="button" class="btn btn-block btn-success btn-lg">Get started</button>
-                                </div>                            
-                            </form>
-                        </div>
-                    </div>  
-                </div>
-            </div>
-            <div id="carouselbrand" class="carousel slide carousel-multi-item v-2" data-ride="carousel">
-                <div class="carousel-inner" role="listbox">
-                    <div class="carousel-item active">
-                        <img src="/img/carousel/1amazon.png"  alt="slide 1">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="/img/carousel/2google.png"  alt="slide 2">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="/img/carousel/3paypal.png"  alt="slide 3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="/img/carousel/4slack.png"  alt="slide 3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="/img/carousel/5samsung.png"  alt="slide 3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="/img/carousel/6airbnb.png"  alt="slide 3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="/img/carousel/7lenovo.png"  alt="slide 3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="/img/carousel/8spotify.png"  alt="slide 3">
-                    </div>
-                </div>
-            </div>
-    </main>
-	<footer ></footer>
-    <script type="text/javascript">
-        $(document).ready(function() {
-            let items = $('#carouselbrand .carousel-item');
-            for (var j = 0; j < items.length; j++) {
-                for (var i=1;i<6;i++) {
-                    let idx = j + i;
-                    if (idx > 7)
-                        idx = idx - 8;
-                    next = $(items[idx]);
-                    next.children(':first-child').clone().appendTo($(items[j]));
-                }
-            }            
+
+<header class="sticky-top gradient">
+	<div class="row align-items-center" id="nav-main">
+		<div class="col-1"><img src="/img/logo-white.svg"></div>
+		<div class="col-6 offset-5">
+			<ul class="list-group list-group-horizontal align-items-center float-right">
+				<li class="list-group-item list-nav-main">Home</li>
+				<li class="list-group-item list-nav-main">Pages</li>
+				<li class="list-group-item list-nav-main">Works</li>
+				<li class="list-group-item list-nav-main">Shop</li>
+				<li class="list-group-item list-nav-main">Docs</li>
+				<li class="list-group-item list-nav-main"><button type="button" class="btn btn-success signin-button"><i class="fas fa-user-circle" id="user-icon-nav"></i> Signin</button> </li>
+				<li class="list-group-item list-nav-main"><span><i class="fas fa-search"></i></span></li>
+				<li class="list-group-item list-nav-main"><span><i class="fas fa-shopping-cart"></i></span></li>
+				<li class="list-group-item list-nav-main"><span><i class="fas fa-bars"></i></span></li>
+			</ul>
+		</div>
+	</div>
+
+</header>
+<main >
+	<div class="container gradient">
+		<div class="row align-items-center large-padding-top">
+			<div class="col-6" id="slogan-main">
+				<p>Join the change</p>
+				<h1>Space service that moves work forward</h1>
+			</div>
+			<div class="col-6">
+				<div class="rounded" id="div-signin-form">
+					<h2 >Get sarted for free
+					</h2>
+					<form id="homepage-signin-form">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Enter your user name">
+						</div>
+						<div class="form-group">
+							<input type="email" class="form-control" placeholder="Enter your email adress">
+						</div>
+						<div class="form-group">
+							<input type="password" class="form-control" placeholder="Enter your password">
+						</div>
+						<div class="form-group">
+							<button type="button" class="btn btn-block btn-success btn-lg">Get started</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row d-flex justify-content-center">
+		<div class="col-md-6">
+			<div class="carousel" role="listbox">
+
+				<img src="https://htmlstream.com/preview/space-v1.5.0/assets/img/clients/amazon.png"  alt="slide 1">
+				<img src="https://htmlstream.com/preview/space-v1.5.0/assets/img/clients/google.png"  alt="slide 2">
+				<img src="https://htmlstream.com/preview/space-v1.5.0/assets/img/clients/paypal.png"  alt="slide 3">
+				<img src="https://htmlstream.com/preview/space-v1.5.0/assets/img/clients/amazon.png"  alt="slide 1">
+				<img src="https://htmlstream.com/preview/space-v1.5.0/assets/img/clients/google.png"  alt="slide 2">
+				<img src="https://htmlstream.com/preview/space-v1.5.0/assets/img/clients/paypal.png"  alt="slide 3">
+				<img src="https://htmlstream.com/preview/space-v1.5.0/assets/img/clients/amazon.png"  alt="slide 1">
+
+				<img src="https://htmlstream.com/preview/space-v1.5.0/assets/img/clients/google.png"  alt="slide 2">
+				<img src="https://htmlstream.com/preview/space-v1.5.0/assets/img/clients/paypal.png"  alt="slide 3">
+
+			</div>
+		</div>
+	</div>
+</main>
+<footer ></footer>
+<script type="text/javascript">
+		$(document).ready(function(){
+        $('.carousel').slick({
+            slidesToShow: 6,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            accessibility: false,
+            adaptiveHeight: true,
+            arrows: false,
         });
-        
-    </script>
+    });
+
+</script>
 
 </body>
