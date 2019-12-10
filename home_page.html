@@ -1,27 +1,53 @@
 <!DOCTYPE html>
-<head >
-
-    
-	<meta charset="utf-8">
+<head > 
+    <meta charset="utf-8">
 	<title >(Brackets Live Preview: closed) Example Home Page</title>
 	<meta name="author" content="Your Name">
 	<meta name="description" content="Example description">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/css/app.css">
-    <link href="/Awesome/fontawesome-free-5.11.2-web/css/all.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-</head>
+	<link rel="stylesheet" href="css/app.css"  type="text/css">
+	<link href="Awesome/fontawesome-free-5.11.2-web/css/all.css" rel="stylesheet" type="text/css">
+	<link type="text/css" rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</head>
 
 <body >
     
+    <div class="modal" id="newsletter-modal" >
+        <div class="newsletter-modal-content">
+            <span class="close-newsletter-modal">&times;</span>
+            <h4>Souhaitez-vous vous inscrire à notre Newsletter ?</h4>
+            <form id="form-newsletter-modal">
+                <div class="form-group">
+                    <input type="checkbox" name="news_photo" id="news_photo"><label for="news_photo">Photo</label>
+                </div>             
+                <div class="form-group">
+                    <input type="checkbox" name="news_video" id="news_video"><label for="news_video">Vidéo</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" name="news_drone" id="news_drone"><label for="news_drone">Drone</label>
+                </div>
+                <div class="row justify-content-around" id="button-newsletter">
+                    <button type="button" class="btn btn-success btn-lg">Oui</button>
+                    <button type="button" class="btn btn-success btn-lg" id="newsletter-no">Non</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
 	<header class="sticky-top gradient">
-            <div class="row align-items-center" id="nav-main">
-                <div class="col-1"><img src="/img/logo-white.svg"></div>
-                <div class="col-6 offset-5">
+            <div class="row align-items-center nav-transparent" id="nav-main">
+                <div class="col-1"><img src="/img/logo-white.svg">
+                </div>
+                <div class="col-3" id="countdown">
+                </div>
+                <div class="col-8">
                     <ul class="list-group list-group-horizontal align-items-center float-right">
                         <li class="list-group-item list-nav-main">Home
                             <span class="fa fa-angle-down"></span>
@@ -44,9 +70,9 @@
                         <li class="list-group-item list-nav-main"><span><i class="fas fa-bars"></i></span></li>
                     </ul>
                 </div>
-            </div>
-        
+            </div>       
     </header>
+
     <main >
             <div class="container gradient">
                 <div class="row align-items-center">
@@ -76,31 +102,17 @@
                     </div>  
                 </div>
             </div>
-            <div id="carouselbrand" class="carousel slide carousel-multi-item v-2" data-ride="carousel">
-                <div class="carousel-inner" role="listbox">
-                    <div class="carousel-item active">
+            <div class="row d-flex justify-content-center" id="carousel-row">
+                <div class="col-md-6">
+                    <div class="carousel" role="listbox">
                         <img src="/img/carousel/1amazon.png"  alt="slide 1">
-                    </div>
-                    <div class="carousel-item">
                         <img src="/img/carousel/2google.png"  alt="slide 2">
-                    </div>
-                    <div class="carousel-item">
                         <img src="/img/carousel/3paypal.png"  alt="slide 3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="/img/carousel/4slack.png"  alt="slide 3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="/img/carousel/5samsung.png"  alt="slide 3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="/img/carousel/6airbnb.png"  alt="slide 3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="/img/carousel/7lenovo.png"  alt="slide 3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="/img/carousel/8spotify.png"  alt="slide 3">
+                        <img src="/img/carousel/4slack.png"  alt="slide 4">
+                        <img src="/img/carousel/5samsung.png"  alt="slide 5">
+                        <img src="/img/carousel/6airbnb.png"  alt="slide 6">
+                        <img src="/img/carousel/7lenovo.png"  alt="slide 7">
+                        <img src="/img/carousel/8spotify.png"  alt="slide 8">
                     </div>
                 </div>
             </div>
@@ -228,23 +240,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>           
     </main>
-	<footer ></footer>
-    <script type="text/javascript">
-        $(document).ready(function() {
-            let items = $('#carouselbrand .carousel-item');
-            for (var j = 0; j < items.length; j++) {
-                for (var i=1;i<6;i++) {
-                    let idx = j + i;
-                    if (idx > 7)
-                        idx = idx - 8;
-                    next = $(items[idx]);
-                    next.children(':first-child').clone().appendTo($(items[j]));
-                }
-            }            
-        });
-        
-    </script>
-
+    
+    <script src="js/functions.js"></script>
 </body>

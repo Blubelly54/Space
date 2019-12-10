@@ -1,0 +1,55 @@
+var app = {
+
+    init: function () {
+        console.log('app: init');
+
+        app.modal = document.querySelector("#NLmodal");
+
+
+        var span = document.getElementsByClassName("close")[0].addEventListener('click', app.modalDisplay);
+        
+
+        window.onclick = function (event) {
+            console.log('window.onclick');
+            if (event.target == app.modal) {
+                app.modal.style.display = "none";
+            }
+        } 
+    
+    
+
+    },
+// Fin de la fonction init
+
+
+
+    //Function modalDisplay
+    modalDisplay: function() {
+        console.log('modaldisplay');
+        app.modal.style.display = 'none';
+    },
+
+
+
+    
+
+/*$(document).ready(function () {
+    $('.carousel').slick({
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        accessibility: false,
+        adaptiveHeight: true,
+        arrows: false,
+    });
+});*/
+
+
+
+
+
+
+};
+
+document.addEventListener('DOMContentLoaded', app.init);

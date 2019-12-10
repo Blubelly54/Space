@@ -1,45 +1,101 @@
-#nav-main {
-    max-width: 100%;
-    margin: 0;
-    margin-bottom: 20px;
-    background-color: transparent;
-    border-bottom: solid 1px gray;
+/*POP-IN NEWSLETTER*/
+#newsletter-modal {
+    display: block;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
 }
 
-@media (min-width: 600px) {
-    body {
-        background-image: linear-gradient(0deg,rgba(0,0,0,0) 0%,rgba(21,27,38,0.5) 100%), url('/img/img4.jpg');
-        background-position: top center;
-        background-repeat: no-repeat;
-    }
-    .signin-button {
-        min-width: 100px; 
-    }
+.newsletter-modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 600px !important;
+    height: 350px;
+  }
+
+.newsletter-modal-content > h4 {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
 }
 
-@media (max-width: 600px) {
-    body {
-        background-image:url('/img/img4.jpg'); 
-        background-position: top center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
+#button-newsletter-modal {
+    padding-left: 100px;
+    padding-right: 100px;
 }
 
+.close-newsletter-modal {
+    color: #888;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    display: flex;
+    justify-content: right;
+  }
+  
+.close-newsletter-modal:hover, .close-newsletter-modal:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+/*COMPTE A REBOURS*/
+#countdown {
+    display: flex;
+    justify-content: right;
+    font-size: 30px;
+}
+
+
+/*MARGE SUR LES 2 ELEMENTS DE CLASSE "GRADIENT"*/
 .gradient {
     margin-bottom: 150px;
 }
 
-.list-nav-main {
-    border: 0px !important;
-    background-color: transparent !important;
-    color: white;
+
+/*NAVBAR*/
+#nav-main {
+    max-width: 100%;
+    margin: 0;
+    margin-bottom: 20px;
+    border-bottom: solid 1px gray;
 }
 
-#user-icon-nav{
+.list-nav-main {
+    border: 0px !important;
+    background-color: inherit !important;
+    color: inherit;
+}
+
+#user-icon-nav {
     font-size: 14px;
 }
 
+.nav-colored {
+    background-color: white;
+    color: black; 
+}
+
+.nav-colored img {
+    filter: invert(100);
+}
+
+.nav-transparent {
+    background-color:transparent;
+    color: white;
+}
+
+
+/*SLOGAN*/
 #slogan-main {
     color: white;
     vertical-align: middle;
@@ -50,6 +106,8 @@
     margin-right: 50px;
 }
 
+
+/*FORMULAIRE D'INSCRIPTION*/
 #div-signin-form {
     background-color: white;
     padding: 10%;
@@ -61,46 +119,18 @@
     text-align: center;
 }
 
-#carouselbrand 
-.carousel-item.active {
-    display: flex;
-    max-height: 100px;
+
+/*CAROUSEL*/
+#carousel-row {
+    background: white;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-bottom: solid 1px gray;
+    margin-right: 0;
 }
 
-#carouselbrand {
-    overflow: hidden;
-    max-height: 100px;
-    background-color: white;
-    padding-block-start: 50px;
-    padding-block-end: 100px;
-    border-block: solid 1px rgb(161, 158, 158);
-}
 
-.carousel-item {
-    margin: 0 !important;
-    flex-direction: row;
-    justify-content: space-between;
-    max-width: 50%;
-    max-height: 100px;
-}
-
-.carousel-inner {
-    display: flex;
-    justify-content: center;
-}
-
-.carousel-item.active > img {
-    max-width: 100px;
-    display: flex;
-    max-width: 100px;
-    max-height: 33.5px;
-}
-
-.carousel-item > img {
-    max-width: 100px;
-    max-height: 33.5px;
-}
-
+/*LES 3 METHODES DE SPACE*/
 #methods-tab {
     background-color: white;
     padding-top: 100px;
@@ -164,5 +194,24 @@
 }
 
 
+/*DIMENSIONS DES ELEMENTS EN FONCTION DE LA TAILLE DU MEDIA*/
+@media (min-width: 600px) {
+    body {
+        background-image: linear-gradient(0deg,rgba(0,0,0,0) 0%,rgba(21,27,38,0.5) 100%), url('/img/img4.jpg');
+        background-size: 100vw;
+        background-position: top center;
+        background-repeat: no-repeat;
+    }
+    .signin-button {
+        min-width: 100px; 
+    }
+}
 
-
+@media (max-width: 600px) {
+    body {
+        background-image:url('/img/img4.jpg'); 
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
