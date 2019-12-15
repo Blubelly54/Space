@@ -69,7 +69,7 @@ $(document).ready(function () {
 ///////////////////////////////////////////////////////// FONCTIONS
 
 
-//POP IN
+//POP IN NEWSLETTER
 function modal() {
     var modal = document.getElementById("newsletter-modal");
 
